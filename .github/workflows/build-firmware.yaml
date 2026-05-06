@@ -34,13 +34,13 @@ jobs:
     #  if: ${{ contains(github.ref_name, '.') }}
     #  run: echo '::error::Branch names must not contain ".", this breaks firmware autoupdates.' && exit 1
 
-    #- name: Set run condition variables
-     # run: |
+    - name: Set run condition variables
+      run: |
      #   if [ "${{github.repository}}" = "FOME-Tech/fome-fw" ]\
      #   && [ "${{github.event_name}}" = "push" ]\
      #   && [ "${{github.ref}}" = "refs/heads/master" ]\
      #   || [ "${{toJSON(inputs.do_upload)}}" = "true" ]; then
-     #     echo "full=true" >> $GITHUB_ENV
+         echo "full=true" >> $GITHUB_ENV
      #     echo "upload=true" >> $GITHUB_ENV
      #   elif [ "${{github.event_name}}" = "push" ]\
      #   && [ "${{github.ref}}" = "refs/heads/master" ]; then
@@ -55,13 +55,13 @@ jobs:
     #     distribution: 'zulu'
     #     java-version: '8'
 
-     - name: Install multilib, mingw, sshpass and mtools
-       working-directory: ./.github/workflows/
-       run: |
-         sudo ./add-ubuntu-latest-apt-mirrors.sh
-         sudo apt-get install gcc-multilib g++-multilib g++-mingw-w64 gcc-mingw-w64 sshpass mtools
-         sudo apt-get install zip
-         sudo apt-get install dosfstools
+    - name: Install multilib, mingw, sshpass and mtools
+      working-directory: ./.github/workflows/
+      run: |
+        sudo ./add-ubuntu-latest-apt-mirrors.sh
+        sudo apt-get install gcc-multilib g++-multilib g++-mingw-w64 gcc-mingw-w64 sshpass mtools
+        sudo apt-get install zip
+        sudo apt-get install dosfstools
 
      #- name: Install mtools
      #  run: |
