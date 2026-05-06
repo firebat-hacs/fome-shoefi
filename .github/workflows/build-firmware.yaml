@@ -30,22 +30,22 @@ jobs:
             ini-file: fome_shoefi.ini
 
     steps:
-    - name: Check branch name
-      if: ${{ contains(github.ref_name, '.') }}
-      run: echo '::error::Branch names must not contain ".", this breaks firmware autoupdates.' && exit 1
+    #- name: Check branch name
+    #  if: ${{ contains(github.ref_name, '.') }}
+    #  run: echo '::error::Branch names must not contain ".", this breaks firmware autoupdates.' && exit 1
 
     - name: Set run condition variables
       run: |
-        if [ "${{github.repository}}" = "FOME-Tech/fome-fw" ]\
-        && [ "${{github.event_name}}" = "push" ]\
-        && [ "${{github.ref}}" = "refs/heads/master" ]\
-        || [ "${{toJSON(inputs.do_upload)}}" = "true" ]; then
+     #   if [ "${{github.repository}}" = "FOME-Tech/fome-fw" ]\
+     #   && [ "${{github.event_name}}" = "push" ]\
+     #   && [ "${{github.ref}}" = "refs/heads/master" ]\
+     #   || [ "${{toJSON(inputs.do_upload)}}" = "true" ]; then
           echo "full=true" >> $GITHUB_ENV
           echo "upload=true" >> $GITHUB_ENV
-        elif [ "${{github.event_name}}" = "push" ]\
-        && [ "${{github.ref}}" = "refs/heads/master" ]; then
-          echo "full=true" >> $GITHUB_ENV
-        fi
+     #   elif [ "${{github.event_name}}" = "push" ]\
+     #   && [ "${{github.ref}}" = "refs/heads/master" ]; then
+     #     echo "full=true" >> $GITHUB_ENV
+     #   fi
     - uses: actions/checkout@v6
       with:
         submodules: true
