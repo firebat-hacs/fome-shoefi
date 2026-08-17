@@ -38,13 +38,6 @@ pins:
     ts_name: EECIV 7 Engine Coolant Temperature (CLT)
     function: Engine Coolant Temperature (CLT)
 
-  - pin: EECIV-8
-    id: EFI_ADC_20
-    class: analog_inputs
-    ts_name: EECIV 8 TPS2
-    function: TPS2
-
-
   - pin: EECIV-9
     function: MAF Ground
 
@@ -168,9 +161,6 @@ pins:
   - pin: EECIV-33
     function: EGR Valve Regulator Solenoid (NC)
 
-  - pin: EECIV-34
-    function: DC1-
-
   - pin: EECIV-35
     id: C6
     class: outputs
@@ -189,9 +179,6 @@ pins:
     ts_name: EECIV 37 VBATT
     function: 12V in Start and Run
 
-  - pin: EECIV-38
-    function: DC1+
-
   - pin: EECIV-39
     function: Speed Control Command Switch Ground
 
@@ -204,23 +191,11 @@ pins:
     ts_name: EECIV 41 High Speed Fuel Pump
     function: HFP
 
-  - pin: EECIV-42
-    id: EFI_ADC_19
-    class: analog_inputs
-    ts_name: EECIV 42 PPS2
-    function: PPS2
-
   - pin: EECIV-43
     id: EFI_ADC_1
     class: analog_inputs
     ts_name: EECIV 43 HEGO 2 (Front)
     function: HEGO 2 (Front)
-
-  - pin: EECIV-44
-    id: EFI_ADC_3
-    class: analog_inputs
-    ts_name: EECIV 44 PPS
-    function: PPS
 
   - pin: EECIV-45
     id: EFI_ADC_10
@@ -254,12 +229,6 @@ pins:
     class: outputs
     ts_name: EECIV 51 Speed Control Vacuum Solenoid
     function: Speed Control Vacuum Solenoid
-
-  - pin: EECIV-52
-    function: DC2-
-
-  - pin: EECIV-53
-    function: DC2+
 
   - pin: EECIV-54
     id: A8
