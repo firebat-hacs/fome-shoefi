@@ -381,3 +381,99 @@ pins:
     class: analog_inputs
     ts_name: P7 (MAP3)
     function: Aux In 7
+
+  - pin: P8
+    id: E12
+    class: switch_inputs
+    ts_name: P8 (D1)
+    function: Digital In 1
+    
+  - pin: P9
+    id: E13
+    class: switch_inputs
+    ts_name: P9 (D2)
+    function: Digital In 2
+    
+  - pin: P10
+    id: E14
+    class: switch_inputs
+    ts_name: P10 (D3)
+    function: Digital In 3
+    
+  - pin: P11
+    id: E15
+    class: switch_inputs
+    ts_name: P11 (D4)
+    function: Digital In 4
+        
+  - pin: P12
+    id: EFI_ADC_3
+    class: analog_inputs
+    ts_name: P12 (PPS)
+    function: Aux In 8
+        
+  - pin: P13
+    id: EFI_ADC_19
+    class: analog_inputs
+    ts_name: P13 (PPS2)
+    function: Aux In 9
+        
+  - pin: P14
+    id: B9
+    class: outputs
+    ts_name: P14 (Lowside Spare 1)
+    function: Aux Out 1
+        
+  - pin: P15
+    id: E6
+    class: outputs
+    ts_name: P15 (Lowside Spare 2)
+    function: Aux Out 2
+
+  - pin: P17
+    id: EFI_ADC_20
+    class: analog_inputs
+    ts_name: P17 (TPS2)
+    function: Aux In 10
+    
+  - pin: P21
+    id: N16
+    class: switch_inputs, outputs
+    ts_name: P21 (IO1)
+    function: Aux I/O 1
+    
+  - pin: P22
+    id: N19
+    class: switch_inputs, outputs
+    ts_name: P21 (IO2)
+    function: Aux I/O 2
+    
+  - pin: P23
+    id: N21
+    class: switch_inputs, outputs
+    ts_name: P21 (IO3)
+    function: Aux I/O 3
+    
+  - pin: P24
+    id: N20
+    class: switch_inputs, outputs
+    ts_name: P21 (IO4)
+    function: Aux I/O 4
+    
+  - pin: P25
+    id: N23
+    class: switch_inputs, outputs
+    ts_name: P21 (IO5)
+    function: Aux I/O 5
+    
+  - pin: P26
+    id: E35
+    class: switch_inputs, outputs
+    ts_name: P21 (IO6)
+    function: Aux I/O 6
+    
+  - pin: P27
+    id: E36
+    class: switch_inputs, outputs
+    ts_name: P21 (IO7)
+    function: Aux I/O 7
