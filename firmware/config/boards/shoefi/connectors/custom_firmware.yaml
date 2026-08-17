@@ -16,7 +16,7 @@ pins:
 
 
   - pin: EECIV-4
-    id: F13
+    id: E33
     class: outputs
     ts_name: EECIV 4 Tacho (IDM)
     function: Tacho (IDM)
@@ -168,7 +168,7 @@ pins:
     function: Speed Control Vent Solenoid
 
   - pin: EECIV-36
-    id: B9
+    id: E34
     class: outputs
     ts_name: EECIV 36 Spark Out (SPOUT)
     function: SPOUT
