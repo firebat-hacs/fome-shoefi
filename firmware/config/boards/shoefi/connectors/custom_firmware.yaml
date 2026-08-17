@@ -406,43 +406,43 @@ pins:
     function: Aux In 10
     
   - pin: P21
-    id: N16
+    id: D4
     class: outputs
     ts_name: P21 (IO1)
     function: Aux I/O 1
     
   - pin: P22
-    id: N19
+    id: D7
     class: outputs
     ts_name: P21 (IO2)
     function: Aux I/O 2
     
   - pin: P23
-    id: N21
+    id: G10
     class: outputs
     ts_name: P21 (IO3)
     function: Aux I/O 3
     
   - pin: P24
-    id: N20
+    id: G9
     class: outputs
     ts_name: P21 (IO4)
     function: Aux I/O 4
     
   - pin: P25
-    id: N23
+    id: G15
     class: outputs
     ts_name: P21 (IO5)
     function: Aux I/O 5
     
   - pin: P26
-    id: E35
+    id: D8
     class: outputs
     ts_name: P21 (IO6)
     function: Aux I/O 6
     
   - pin: P27
-    id: E36
+    id: F15
     class: outputs
     ts_name: P21 (IO7)
     function: Aux I/O 7
