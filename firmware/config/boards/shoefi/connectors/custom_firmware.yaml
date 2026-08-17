@@ -407,42 +407,42 @@ pins:
     
   - pin: P21
     id: N16
-    class: switch_inputs, outputs
+    class: outputs
     ts_name: P21 (IO1)
     function: Aux I/O 1
     
   - pin: P22
     id: N19
-    class: switch_inputs, outputs
+    class: outputs
     ts_name: P21 (IO2)
     function: Aux I/O 2
     
   - pin: P23
     id: N21
-    class: switch_inputs, outputs
+    class: outputs
     ts_name: P21 (IO3)
     function: Aux I/O 3
     
   - pin: P24
     id: N20
-    class: switch_inputs, outputs
+    class: outputs
     ts_name: P21 (IO4)
     function: Aux I/O 4
     
   - pin: P25
     id: N23
-    class: switch_inputs, outputs
+    class: outputs
     ts_name: P21 (IO5)
     function: Aux I/O 5
     
   - pin: P26
     id: E35
-    class: switch_inputs, outputs
+    class: outputs
     ts_name: P21 (IO6)
     function: Aux I/O 6
     
   - pin: P27
     id: E36
-    class: switch_inputs, outputs
+    class: outputs
     ts_name: P21 (IO7)
     function: Aux I/O 7
