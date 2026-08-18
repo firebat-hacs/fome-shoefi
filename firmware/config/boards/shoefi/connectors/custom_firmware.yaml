@@ -38,13 +38,6 @@ pins:
     ts_name: EECIV 7 Engine Coolant Temperature (CLT)
     function: Engine Coolant Temperature (CLT)
 
-  - pin: EECIV-8
-    id: EFI_ADC_20
-    class: analog_inputs
-    ts_name: EECIV 8 TPS2
-    function: TPS2
-
-
   - pin: EECIV-9
     function: MAF Ground
 
@@ -168,9 +161,6 @@ pins:
   - pin: EECIV-33
     function: EGR Valve Regulator Solenoid (NC)
 
-  - pin: EECIV-34
-    function: DC1-
-
   - pin: EECIV-35
     id: C6
     class: outputs
@@ -178,7 +168,7 @@ pins:
     function: Speed Control Vent Solenoid
 
   - pin: EECIV-36
-    id: B9
+    id: F14
     class: outputs
     ts_name: EECIV 36 Spark Out (SPOUT)
     function: SPOUT
@@ -188,9 +178,6 @@ pins:
     class: analog_inputs
     ts_name: EECIV 37 VBATT
     function: 12V in Start and Run
-
-  - pin: EECIV-38
-    function: DC1+
 
   - pin: EECIV-39
     function: Speed Control Command Switch Ground
@@ -204,23 +191,11 @@ pins:
     ts_name: EECIV 41 High Speed Fuel Pump
     function: HFP
 
-  - pin: EECIV-42
-    id: EFI_ADC_19
-    class: analog_inputs
-    ts_name: EECIV 42 PPS2
-    function: PPS2
-
   - pin: EECIV-43
     id: EFI_ADC_1
     class: analog_inputs
     ts_name: EECIV 43 HEGO 2 (Front)
     function: HEGO 2 (Front)
-
-  - pin: EECIV-44
-    id: EFI_ADC_3
-    class: analog_inputs
-    ts_name: EECIV 44 PPS
-    function: PPS
 
   - pin: EECIV-45
     id: EFI_ADC_10
@@ -254,12 +229,6 @@ pins:
     class: outputs
     ts_name: EECIV 51 Speed Control Vacuum Solenoid
     function: Speed Control Vacuum Solenoid
-
-  - pin: EECIV-52
-    function: DC2-
-
-  - pin: EECIV-53
-    function: DC2+
 
   - pin: EECIV-54
     id: A8
@@ -381,3 +350,99 @@ pins:
     class: analog_inputs
     ts_name: P7 (MAP3)
     function: Aux In 7
+
+  - pin: P8
+    id: E12
+    class: switch_inputs
+    ts_name: P8 (D1)
+    function: Digital In 1
+    
+  - pin: P9
+    id: E13
+    class: switch_inputs
+    ts_name: P9 (D2)
+    function: Digital In 2
+    
+  - pin: P10
+    id: E14
+    class: switch_inputs
+    ts_name: P10 (D3)
+    function: Digital In 3
+    
+  - pin: P11
+    id: E15
+    class: switch_inputs
+    ts_name: P11 (D4)
+    function: Digital In 4
+        
+  - pin: P12
+    id: EFI_ADC_3
+    class: analog_inputs
+    ts_name: P12 (PPS)
+    function: Aux In 8
+        
+  - pin: P13
+    id: EFI_ADC_19
+    class: analog_inputs
+    ts_name: P13 (PPS2)
+    function: Aux In 9
+        
+  - pin: P14
+    id: B9
+    class: outputs
+    ts_name: P14 (Lowside Spare 1)
+    function: Aux Out 1
+        
+  - pin: P15
+    id: E6
+    class: outputs
+    ts_name: P15 (Lowside Spare 2)
+    function: Aux Out 2
+
+  - pin: P17
+    id: EFI_ADC_20
+    class: analog_inputs
+    ts_name: P17 (TPS2)
+    function: Aux In 10
+    
+  - pin: P21
+    id: D4
+    class: outputs
+    ts_name: P21 (IO1)
+    function: Aux I/O 1
+    
+  - pin: P22
+    id: D7
+    class: outputs
+    ts_name: P21 (IO2)
+    function: Aux I/O 2
+    
+  - pin: P23
+    id: G10
+    class: outputs
+    ts_name: P21 (IO3)
+    function: Aux I/O 3
+    
+  - pin: P24
+    id: G9
+    class: outputs
+    ts_name: P21 (IO4)
+    function: Aux I/O 4
+    
+  - pin: P25
+    id: G15
+    class: outputs
+    ts_name: P21 (IO5)
+    function: Aux I/O 5
+    
+  - pin: P26
+    id: D8
+    class: outputs
+    ts_name: P21 (IO6)
+    function: Aux I/O 6
+    
+  - pin: P27
+    id: F15
+    class: outputs
+    ts_name: P21 (IO7)
+    function: Aux I/O 7
