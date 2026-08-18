@@ -14,20 +14,17 @@ pins:
     ts_name: EECIV 3 Vehicle Speed Sensor
     function: Vehicle Speed Sensor
 
-
   - pin: EECIV-4
     id: F13
     class: outputs
     ts_name: EECIV 4 Tacho (IDM)
     function: Tacho (IDM)
 
-
   - pin: EECIV-5
     id: F4
     class: switch_inputs
     ts_name: EECIV 5 Brake Switch Input
     function: Brake Switch Input
-
 
   - pin: EECIV-6
     function: VSS-
@@ -38,6 +35,9 @@ pins:
     ts_name: EECIV 7 Engine Coolant Temperature (CLT)
     function: Engine Coolant Temperature (CLT)
 
+  - pin: EECIV-8
+    function: Unused
+    
   - pin: EECIV-9
     function: MAF Ground
 
@@ -48,49 +48,49 @@ pins:
     function: AC Clutch
 
   - pin: EECIV-11
-    function: Speed Control Solenoid
+    function: Speed Control Solenoid (P16)
 
   - pin: EECIV-12
     id: D11
     class: outputs
-    ts_name: EECIV 12 Injector 3
-    function: Injector 3
+    ts_name: EECIV 12 Injector 6
+    function: Injector 6
 
   - pin: EECIV-13
     id: D10
     class: outputs
-    ts_name: EECIV 13 Injector 4
-    function: Injector 4
+    ts_name: EECIV 13 Fan Low
+    function: Fan Low
 
   - pin: EECIV-14
     id: D9
     class: outputs
-    ts_name: EECIV 14 Injector 5
-    function: Injector 5
+    ts_name: EECIV 14 Spare Output
+    function: Spare Output
 
   - pin: EECIV-15
     id: F12
     class: outputs
-    ts_name: EECIV 15 Injector 6
-    function: Injector 6
+    ts_name: EECIV 15 Injector 5
+    function: Injector 5
 
   - pin: EECIV-16
     function: Ignition Ground
 
   - pin: EECIV-17
-    function: VIP Test (MIL)
+    function: VIP Test (MIL) (P18)
 
   - pin: EECIV-18
     id: EFI_ADC_8
     class: analog_inputs
-    ts_name: EECIV 18 Octane Adjust (Flex)
-    function: Octane Adjust (Flex)
+    ts_name: EECIV 18 Spare Input
+    function: Spare Input
 
   - pin: EECIV-19
     id: C9
     class:  outputs
-    ts_name: EECIV 19 Fuel Pump Monitor
-    function: Fuel Pump Monitor
+    ts_name: EECIV 19 Spare Output 2
+    function: Spare Output 2
 
   - pin: EECIV-20
     function: Case Ground
@@ -129,7 +129,7 @@ pins:
     function: VREF
 
   - pin: EECIV-27
-    function: Pressure Feedback EGR Sensor (NC) 
+    function: Pressure Feedback EGR Sensor (P43) 
 
   - pin: EECIV-28
     id: EFI_ADC_32
@@ -140,8 +140,8 @@ pins:
   - pin: EECIV-29
     id: EFI_ADC_0
     class: analog_inputs
-    ts_name: EECIV 29 HEGO 1 (Rear)
-    function: HEGO 1 (Rear)
+    ts_name: EECIV 29 Octane Sensor
+    function: Octane
 
   - pin: EECIV-30
     id: F5
@@ -150,22 +150,25 @@ pins:
     function: Clutch Switch Input
 
   - pin: EECIV-31
-    function: Canister Purge Solenoid (NC) 
+    function: Fan High (P41)
 
   - pin: EECIV-32
     id: G14
     class: outputs
-    ts_name: EECIV 32 Secondaries (IMRC)
-    function: IMRC
+    ts_name: EECIV 32 Ride Control
+    function: Ride Control
 
   - pin: EECIV-33
-    function: EGR Valve Regulator Solenoid (NC)
+    function: EGR Valve Regulator Solenoid (P42)
+    
+  - pin: EECIV-34
+    function: Unused (P39)
 
   - pin: EECIV-35
     id: C6
     class: outputs
-    ts_name: EECIV 35 Speed Control Vent Solenoid
-    function: Speed Control Vent Solenoid
+    ts_name: EECIV 35 Injector 4
+    function: Injector 4
 
   - pin: EECIV-36
     id: F14
@@ -179,8 +182,11 @@ pins:
     ts_name: EECIV 37 VBATT
     function: 12V in Start and Run
 
+  - pin: EECIV-38
+    function: SC Bypass (Unused)
+
   - pin: EECIV-39
-    function: Speed Control Command Switch Ground
+    function: Injector 3 (P58)
 
   - pin: EECIV-40
     function: Power Ground
@@ -191,11 +197,17 @@ pins:
     ts_name: EECIV 41 High Speed Fuel Pump
     function: HFP
 
+  - pin: EECIV-42
+    function: Unused (P37)
+
   - pin: EECIV-43
     id: EFI_ADC_1
     class: analog_inputs
-    ts_name: EECIV 43 HEGO 2 (Front)
-    function: HEGO 2 (Front)
+    ts_name: EECIV 43 HEGO 2 (Right)
+    function: HEGO 2 (Right)
+
+  - pin: EECIV-44
+    function: HEGO 1 (Right) Unused (P36)
 
   - pin: EECIV-45
     id: EFI_ADC_10
@@ -229,6 +241,12 @@ pins:
     class: outputs
     ts_name: EECIV 51 Speed Control Vacuum Solenoid
     function: Speed Control Vacuum Solenoid
+
+  - pin: EECIV-52
+    function: Unused (P35)
+
+  - pin: EECIV-53
+    function: Shift Light (P34)
 
   - pin: EECIV-54
     id: A8
