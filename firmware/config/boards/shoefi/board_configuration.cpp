@@ -117,6 +117,22 @@ Gpio getWarningLedPin() {
 	return Gpio::E8;
 }
 
+spi_device_e getWifiSpiDevice() {
+	return SPI_DEVICE_3;
+}
+
+Gpio getWifiCsPin() {
+	return Gpio::A15;
+}
+
+Gpio getWifiResetPin() {
+	return Gpio::D4;
+}
+
+Gpio getWifiIsrPin() {
+	return Gpio::D7;
+}
+
 
 static void setupDefaultSensorInputs() {
 	engineConfiguration->tps1_1AdcChannel = EFI_ADC_4;
