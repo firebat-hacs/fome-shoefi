@@ -50,5 +50,7 @@ endif
 
 include $(BOARDS_DIR)/hellen/hellen-common144.mk
 
+USE_WIFI = yes
+
 
 SHORT_BOARD_NAME = shoefi
