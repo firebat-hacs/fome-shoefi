@@ -38,6 +38,7 @@
 
 #include "console_io.h"
 #include "tunerstudio.h"
+#include "tunerstudio_io.h"
 
 #if EFI_SIMULATOR
 #include "rusEfiFunctionalTest.h"
@@ -47,4 +48,8 @@ CommandHandler console_line_callback;
 
 void startConsole(CommandHandler console_line_callback_p) {
 	console_line_callback = console_line_callback_p;
+
+	// Start the hardware UART TS thread early, but the thread itself waits until
+	// normal firmware startup is complete before enabling the UART peripheral.
+	startSerialChannels();
 }
