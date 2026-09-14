@@ -9,19 +9,14 @@
 #if defined(TS_PRIMARY_UxART_PORT) && HAL_USE_UART
 
 void UartTsChannel::start(uint32_t baud) {
-	m_config = {
-		.txend1_cb = NULL,
-		.txend2_cb = NULL,
-		.rxend_cb = NULL,
-		.rxchar_cb = NULL,
-		.rxerr_cb = NULL,
-		.timeout_cb = NULL,
-		.speed = baud,
-		.cr1 = 0,
-		.cr2 = USART_CR2_STOP1_BITS | USART_CR2_LINEN,
-		.cr3 = 0,
-		.rxhalf_cb = NULL
-	};
+	// 8N1 on STM32F4: one stop bit is represented by STOP=00, so no STOP mask is required.
+	// Use member assignment instead of aggregate initialization to stay compatible with
+	// the current ChibiOS UARTConfig definition.
+	m_config = UARTConfig{};
+	m_config.speed = baud;
+	m_config.cr1 = 0;
+	m_config.cr2 = USART_CR2_LINEN;
+	m_config.cr3 = 0;
 
 	uartStart(m_driver, &m_config);
 }
