@@ -70,6 +70,32 @@ protected:
 	const char* const m_name;
 };
 
+class SerialTsChannelBase : public TsChannelBase {
+public:
+	SerialTsChannelBase(const char* name) : TsChannelBase(name) {}
+	virtual void start(uint32_t baud) = 0;
+};
+
+#if HAL_USE_UART
+class UartTsChannel final : public SerialTsChannelBase {
+public:
+	UartTsChannel(UARTDriver& driver)
+		: SerialTsChannelBase("UART")
+		, m_driver(&driver) {
+	}
+
+	void start(uint32_t baud) override;
+	void stop() override;
+
+	void write(const uint8_t* buffer, size_t size, bool isEndOfPacket) override;
+	size_t readTimeout(uint8_t* buffer, size_t size, int timeout) override;
+
+private:
+	UARTDriver* const m_driver;
+	UARTConfig m_config;
+};
+#endif // HAL_USE_UART
+
 #define CRC_VALUE_SIZE 4
 
 // that's 1 second
@@ -78,4 +104,5 @@ protected:
 // that's 1 second
 #define SR5_READ_TIMEOUT TIME_MS2I(1000)
 
+void startSerialChannels();
 void startCanConsole();
