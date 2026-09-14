@@ -50,7 +50,10 @@ endif
 
 include $(BOARDS_DIR)/hellen/hellen-common144.mk
 
-USE_WIFI = yes
+# Enable TunerStudio UART on USART2
+DDEFS += $(PRIMARY_COMMUNICATION_PORT_USART2)
+
+#USE_WIFI = yes #Atwinc1500 stuff
 
 
 SHORT_BOARD_NAME = shoefi
