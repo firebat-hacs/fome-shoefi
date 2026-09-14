@@ -48,10 +48,13 @@ endif
 
 include $(BOARDS_DIR)/hellen/hellen-common144.mk
 
-# Restore TunerStudio UART on Hellen 144 USART2.
-# hellen-common144.mk defines PD5 TX, PD6 RX, UARTD2 and enables USART2.
+# Restore TunerStudio UART on Hellen 144 USART2 for the real STM32F4 target only.
+# The simulator has no ChibiOS UART low-level driver, so these hardware defines
+# must not leak into simulator builds.
+ifeq ($(PROJECT_CPU),ARCH_STM32F4)
 DDEFS += $(PRIMARY_COMMUNICATION_PORT_USART2)
 DDEFS += -DHAL_USE_UART=TRUE -DEFI_CONSOLE_AF=7 -DTS_PRIMARY_BAUD=115200
+endif
 
 #USE_WIFI = yes #Atwinc1500 stuff
 
